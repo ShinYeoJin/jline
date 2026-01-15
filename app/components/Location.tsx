@@ -9,7 +9,7 @@ declare global {
   }
 }
 
-const NAVER_MAP_CLIENT_ID = String(process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID);
+const NAVER_MAP_CLIENT_ID = String(process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID || '0dhku3yuua');
 
 
 export default function Location() {
