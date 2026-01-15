@@ -9,7 +9,11 @@ declare global {
   }
 }
 
-const NAVER_MAP_CLIENT_ID = String(process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID || 'ms6l78wr46');
+const NAVER_MAP_CLIENT_ID = process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID;
+
+if (!NAVER_MAP_CLIENT_ID) {
+  console.error('NEXT_PUBLIC_NAVER_MAP_CLIENT_ID 환경변수가 설정되지 않았습니다.');
+}
 
 
 export default function Location() {
@@ -25,6 +29,15 @@ export default function Location() {
   useEffect(() => {
     if (!mapRef.current) return;
 
+    if (!NAVER_MAP_CLIENT_ID) {
+      console.error('네이버 지도 API Client ID가 설정되지 않았습니다.');
+      return;
+    }
+
+    // 디버깅: 실제 사용되는 Client ID 확인
+    console.log('네이버 지도 API Client ID:', NAVER_MAP_CLIENT_ID);
+    console.log('현재 페이지 URL:', window.location.href);
+
     const existingScript = document.getElementById('naver-map-script');
     if (existingScript) existingScript.remove();
 
@@ -34,19 +47,30 @@ export default function Location() {
     script.async = true;
 
     script.onload = () => {
-      if (!window.naver || !window.naver.maps) return;
+      if (!window.naver || !window.naver.maps) {
+        console.error('네이버 지도 API가 로드되지 않았습니다.');
+        return;
+      }
 
-      const position = new window.naver.maps.LatLng(37.6238, 126.7154);
-      const map = new window.naver.maps.Map(mapRef.current, {
-        center: position,
-        zoom: 16,
-      });
+      try {
+        const position = new window.naver.maps.LatLng(37.6238, 126.7154);
+        const map = new window.naver.maps.Map(mapRef.current, {
+          center: position,
+          zoom: 16,
+        });
 
-      new window.naver.maps.Marker({
-        position,
-        map,
-        title: '제이라인',
-      });
+        new window.naver.maps.Marker({
+          position,
+          map,
+          title: '제이라인',
+        });
+      } catch (error) {
+        console.error('네이버 지도 초기화 중 오류 발생:', error);
+      }
+    };
+
+    script.onerror = () => {
+      console.error('네이버 지도 API 스크립트 로드 실패');
     };
 
     document.head.appendChild(script);
