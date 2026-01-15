@@ -9,7 +9,7 @@ declare global {
   }
 }
 
-const NAVER_MAP_CLIENT_ID = String(process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID || '0dhku3yuua');
+const NAVER_MAP_CLIENT_ID = String(process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID);
 
 
 export default function Location() {
@@ -87,7 +87,7 @@ export default function Location() {
             </div>
             <div className="mt-6 pt-6 border-t border-gray-200">
               <p className="text-sm text-gray-500 mb-3 font-medium">걸포북변역 2번 출구에서 489m</p>
-              <Button onClick={handleReservation}>
+              <Button className="hover:bg-[#222]" onClick={handleReservation}>
                 예약 문의하기
               </Button>
             </div>
