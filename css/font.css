@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Aritaburi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+#logo {
+    font-family: 'Aritaburi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
