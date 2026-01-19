@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="pt-6 sm:pt-8 border-t border-gray-800 text-center text-gray-500 text-xs sm:text-sm px-4">
-        <p>© 2026 제이라인. All rights reserved.</p>
+        <p>© 2026 제이라인. All rights reserved.1.0.0</p>
       </div>
     </footer>
   );
