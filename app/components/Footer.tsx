@@ -18,7 +18,7 @@ export default function Footer() {
             <p>
               전화: <a href="tel:0507-1478-0261" className="hover:text-white transition">0507-1478-0261</a>
             </p>
-            <p>사업자등록번호: 123-45-67890</p>
+            <p>사업자등록번호: 696-34-00989</p>
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@ export default function Service() {
           시술 안내
         </h2>
         <p className="text-gray-600 text-base sm:text-lg">
-          전문 속눈썹 펌 시술
+          전문 속눈썹 연장 시술
         </p>
       </div>
 
