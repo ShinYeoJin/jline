@@ -10,7 +10,7 @@ declare global {
 }
 
 const NAVER_MAP_CLIENT_ID = process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID;
-// const NAVER_MAP_CLIENT_ID = 'ms6l78wr46';
+
 
 if (!NAVER_MAP_CLIENT_ID) {
   console.error('NEXT_PUBLIC_NAVER_MAP_CLIENT_ID 환경변수가 설정되지 않았습니다.');
