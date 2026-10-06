@@ -36,7 +36,6 @@ export default function Location() {
     }
 
     // 디버깅: 실제 사용되는 Client ID 확인
-    console.log('네이버 지도 API Client ID:', NAVER_MAP_CLIENT_ID);
     console.log('현재 페이지 URL:', window.location.href);
     console.log('현재 페이지 Origin:', window.location.origin);
     console.log('현재 페이지 Pathname:', window.location.pathname);
