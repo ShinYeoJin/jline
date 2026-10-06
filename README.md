@@ -95,7 +95,8 @@ jline/
 │   │       └── IconTextRow.tsx
 │   ├── data/                # 정적 데이터
 │   │   ├── services.ts      # 시술 정보
-│   │   └── reviews.ts       # 고객 후기
+│   │   ├── reviews.ts       # 고객 후기
+│   │   └── slides.ts        # 갤러리 슬라이드 이미지 목록
 │   ├── layout.tsx           # 루트 레이아웃
 │   ├── page.tsx             # 메인 페이지
 │   └── globals.css          # 전역 스타일
@@ -104,7 +105,7 @@ jline/
 ├── public/
 │   └── images/              # 이미지 파일
 ├── next.config.ts           # Next.js 설정
-├── tailwind.config.ts       # Tailwind CSS 설정
+├── postcss.config.mjs       # PostCSS 설정 (Tailwind CSS)
 └── tsconfig.json            # TypeScript 설정
 ```
 
