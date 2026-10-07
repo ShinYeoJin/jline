@@ -56,6 +56,7 @@ NEXT_PUBLIC_NAVER_MAP_CLIENT_ID=<네이버 지도 Client ID>
 3. Maps > Web Dynamic Map 서비스 활성화
 4. Web 서비스 URL에 배포 도메인 등록 (예: `https://jline.vercel.app/`)
 5. 발급받은 Client ID를 환경 변수에 설정
+   - 지도 스크립트 주소에서는 이 값을 `ncpKeyId=` 이름으로 전달합니다 (예전 방식인 `clientId=`가 아닙니다).
 
 ### 4. 개발 서버 실행
 
